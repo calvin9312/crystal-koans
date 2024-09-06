@@ -7,16 +7,16 @@ describe Student do
   # you can get the path and name of the current file
   # so for example you can reference config files or static assets
   it "knows about __FILE__" do
-    __FILE__[-2..-1].should eq FILL_IN_THIS
+    __FILE__[-2..-1].should eq "cr"
   end
 
   it "knows about __DIR__" do
-    __DIR__.split('/').size.should eq FILL_IN_THIS
+    __DIR__.split('/').size.should eq 6
   end
 
   # next ones are useful for logging and debugging
   it "knows about __LINE__" do
-    __LINE__.should eq FILL_IN_THIS
+    __LINE__.should eq 19
   end
   # __END_LINE__ is the line number of the end of the calling block.
   # Can only be used as a default value to a method parameter.
@@ -24,7 +24,7 @@ describe Student do
   it "knows about __END_LINE__" do
     first_line = __LINE__
     # Currently at line number: #{__LINE__}
-    measure_function_length(first_line).should eq FILL_IN_THIS
+    measure_function_length(first_line).should eq 2
   end
 end
 

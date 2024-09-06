@@ -27,23 +27,23 @@ end
 describe Student do
   it "can create and use generic types" do
     q = NoDupStack(Int32).new
-    q.size.should eq FILL_IN_THIS
+    q.size.should eq 0
     q.push(3)
     q.push(4)
     q.push(3)
-    q.size.should eq FILL_IN_THIS
-    q.pop.should eq FILL_IN_THIS
-    q.pop.should eq FILL_IN_THIS
+    q.size.should eq 3
+    q.pop.should eq 3
+    q.pop.should eq 4
   end
   it "can create and use generic types" do
     q = NoDupStack(String).new
     q.push("foo")
     q.push("hello")
     q.push("hello")
-    q.size.should eq FILL_IN_THIS
+    q.size.should eq 2
     q.push("bar")
     q.push("hello")
-    q.pop.should eq FILL_IN_THIS
-    q.pop.should eq FILL_IN_THIS
+    q.pop.should eq "hello"
+    q.pop.should eq "bar"
   end
 end

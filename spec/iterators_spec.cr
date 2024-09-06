@@ -34,6 +34,6 @@ describe Student do
     fib.each do |n| # values are generated lazily, minimum memory usage
       sum += n
     end
-    sum.should eq FILL_IN_THIS
+    sum.should eq 20
   end
 end

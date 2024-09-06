@@ -16,23 +16,23 @@ describe Student do
   it "knows symbols are comparable" do
     sym1 = :a_symbol
     sym2 = sym1
-    sym2.should eq FILL_IN_THIS
+    sym2.should eq :a_symbol
   end
 
   it "knows symbols can be converted" do
     sym = :potatoes
-    sym.to_s.should eq FILL_IN_THIS
-    sym.inspect.should eq FILL_IN_THIS # why ?
-    sym.to_i.should eq FILL_IN_THIS    # this can be a surprise
+    sym.to_s.should eq "potatoes"
+    sym.inspect.should eq ":potatoes" # why ?
+    sym.to_i.should eq :potatoes.to_i    # this can be a surprise
   end
 
   it "knows symbols are cheap" do
-    sizeof(Symbol).should eq FILL_IN_THIS
-    instance_sizeof(String).should eq FILL_IN_THIS
+    sizeof(Symbol).should eq sizeof(Int32)
+    instance_sizeof(String).should eq 16
   end
 
   it "knows array of symbols" do
     sym = %i(foo bar baz)
-    sym[2].should eq FILL_IN_THIS
+    sym[2].should eq :baz
   end
 end

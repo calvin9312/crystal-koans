@@ -13,11 +13,13 @@ describe Student do
   it "knows exception handling" do
     # implement code to handle this possible failure
     n = failing_function(3)
+  rescue ex
+	p! ex
   end
 
   it "knows custom exceptions" do
     expect_raises(MyError) do
-      x = FILL_IN_THIS_NUMBER
+      x = 10
       n = failing_function(x)
     end
   end

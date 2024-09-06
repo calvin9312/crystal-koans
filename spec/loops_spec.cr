@@ -11,7 +11,7 @@ describe Student do
       result << i
     end
 
-    result.should eq FILL_IN_THIS
+    result.should eq [ 1, 3, 5, 7, 9 ]
   end
 
   it "knows times loops" do
@@ -19,7 +19,7 @@ describe Student do
     10.times do
       sum += 1
     end
-    sum.should eq FILL_IN_THIS
+    sum.should eq 10
   end
 
   it "knows upto, downto loops" do
@@ -30,8 +30,8 @@ describe Student do
     1.downto 10 do |n|
       sum2 += n
     end
-    sum1.should eq FILL_IN_THIS
-    (sum1 == sum2).should eq FILL_IN_THIS
+    sum1.should eq 55
+    (sum1 == sum2).should eq false
   end
 
   it "knows until loops" do
@@ -44,12 +44,12 @@ describe Student do
       steps += 1
     end
 
-    steps.should eq FILL_IN_THIS
+    steps.should eq 5
   end
 
   it "knows each loops" do
     [2, 4, 6, 8].each do |n|
-      (n % 2).should eq FILL_IN_THIS
+      (n % 2).should eq 0
     end
   end
 end

@@ -23,22 +23,22 @@ describe Student do
     # 1. a simple require "filename" looks up filename.cr in the require path
     # By default the require path is the location of the standard library that comes with the compiler,
     # and the "lib" directory relative to the current working directory
-    SIMPLELIB_CONST.should eq FILL_IN_THIS
+    SIMPLELIB_CONST.should eq 12
   end
 
   it "knows implicit nesting require" do
     # 2. if you have filename/filename.cr you can simply require "filename"
-    NESTEDLIB_CONST1.should eq FILL_IN_THIS
+    NESTEDLIB_CONST1.should eq 34
   end
 
   it "knows explicit nesting require" do
     # 3. you can always explicit the subfolder of the file to require
 
-    NESTEDLIB_CONST2.should eq FILL_IN_THIS
+    NESTEDLIB_CONST2.should eq 56
   end
 
   it "knows src require" do
     # 4. if you require "filename" crystal looks also in filename/src/filename.cr or filename/src/filename/filename.cr
-    MYSRCLIB_CONST.should eq FILL_IN_THIS
+    MYSRCLIB_CONST.should eq 78
   end
 end

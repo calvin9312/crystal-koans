@@ -18,16 +18,16 @@ describe Student do
   # Invoking new on a struct allocates it on the stack instead of the heap
   it "knows how to create structs" do
     origin = Point.new(0, 0)
-    origin.x.should eq FILL_IN_THIS
-    origin.y.should eq FILL_IN_THIS
+    origin.x.should eq 0
+    origin.y.should eq 0
   end
 
   # A struct is passed by value while a class is passed by reference
   it "knows how to pass struct" do
     p = Point.new(3, 4)
     update_point(p)
-    p.x.should eq FILL_IN_THIS
-    p.y.should eq FILL_IN_THIS
+    p.x.should eq 3
+    p.y.should eq 4
   end
 
   # A struct can also include modules and can be generic, just like a class.

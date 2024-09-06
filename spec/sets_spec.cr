@@ -9,13 +9,13 @@ describe Student do
 
   it "knows how to create a Set" do
     equal = (s1 == s2) && (s2 == s3)
-    equal.should eq FILL_IN_THIS
+    equal.should eq true
   end
 
   it "knows subset of a Set" do
     s1.add(2)
     s1.concat([6, 8])
-    s1.subset_of?(s2).should eq FILL_IN_THIS
-    s2.subset_of?(s1).should eq FILL_IN_THIS
+    s1.subset_of?(s2).should eq false
+    s2.subset_of?(s1).should eq true
   end
 end

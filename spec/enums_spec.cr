@@ -42,24 +42,24 @@ end
 describe Student do
   it "knows Enums are types" do
     d = Direction::North
-    d.class.to_s.should eq FILL_IN_THIS
+    d.class.to_s.should eq "Direction"
   end
 
   it "knows Enums" do
     a = [] of TrafficLightColor
     a << TrafficLightColor::Green << TrafficLightColor::Yellow << TrafficLightColor::Red
-    a[1].should eq FILL_IN_THIS
+    a[1].should eq TrafficLightColor::Yellow
   end
 
   it "knows Enums defines question methods" do
     direction = Direction::North
-    direction.north?.should eq FILL_IN_THIS
-    direction.east?.should eq FILL_IN_THIS
+    direction.north?.should eq true
+    direction.east?.should eq false
   end
 
   it "knows Enums can be flag-annotated" do
-    FileMode::Append.value.should eq FILL_IN_THIS
-    FileMode::None.value.should eq FILL_IN_THIS
-    FileMode::All.value.should eq FILL_IN_THIS
+    FileMode::Append.value.should eq 4
+    FileMode::None.value.should eq 0
+    FileMode::All.value.should eq 7
   end
 end

@@ -9,13 +9,13 @@ end
 describe Student do
   it "can call method with variable number of parameters" do
     products = mulby(3, 10, 20, 30)
-    products[2].should eq FILL_IN_THIS
+    products[2].should eq 90
   end
 
   it "can call method with splat parameters" do
     tuple = {3, 5, 7, 11} # need a Tuple, not an Array
     products = mulby(2, *tuple)
-    products[3].should eq FILL_IN_THIS
+    products[3].should eq 22
   end
 
   # see also https://crystal-lang.org/reference/syntax_and_semantics/splats_and_tuples.html

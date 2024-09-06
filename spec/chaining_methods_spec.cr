@@ -12,6 +12,6 @@ describe Student do
     # .tap { |arr| puts "#{arr.inspect}" } # => [64, 16]
       .sort!                   # => [16, 64]
       .any? { |num| num > 50 } # => true
-    result.should eq FILL_IN_THIS
+    result.should eq true
   end
 end
